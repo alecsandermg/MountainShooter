@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import pygame as pg
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT
+from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.menu import Menu
 from code.Const import WIN_WIDTH, WIN_HEIGHT
 
@@ -15,6 +15,15 @@ class Game:
 
         while True:
             menu = Menu(self.window)
-            menu.run()
-            pass
+            menu_return = menu.run()
+
+            if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
+                from code.level import Level
+                level = Level(self.window, 'Level 1', menu_return)
+                level_return = level.run()
+            elif menu_return == MENU_OPTION[4]:
+                pg.quit()
+                quit()
+            else:
+                pass
 
