@@ -23,7 +23,19 @@ ENTITY_SPEED = {
 
 EVENT_ENEMY = pygame.USEREVENT + 1
 
-
+ENTITY_HEALTH = {
+    'Level1BG0': 999,
+    'Level1BG1': 999,
+    'Level1BG2': 999,
+    'Level1BG3': 999,
+    'Level1BG4': 999,
+    'Level1BG5': 999,
+    'Level1BG6': 999,
+    'Player1': 300,
+    'Player2': 300,
+    'Enemy1': 50,
+    'Enemy2': 60
+}
 
 
 
